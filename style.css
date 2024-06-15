@@ -1,0 +1,153 @@
+:root {
+  font-size: 10px;
+  font-family: Ubuntu, 'Titillium Web';
+  --main-color: gainsboro;
+  --accent-color: dodgerblue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .title {
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  font-size: 4.8rem;
+  font-family: 'Titillium Web';
+}
+
+.container .content .navigator-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.container .content .navigator-top .input-list {
+  height: 2.4rem;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  padding: 0 1.6rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.navigator-top button {
+  border-radius: 50%;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  transform: translateX(-0.8rem);
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.8rem;
+  transition: all 0.5s ease;
+}
+
+.navigator-top button:hover {
+  background-color: red;
+}
+
+.container .content .list {
+  background-color: var(--main-color);
+  width: 50rem;
+  height: 20rem;
+  margin-top: 1.8rem;
+  padding: 1.4rem 1.6rem;
+  overflow-y: scroll;
+  scrollbar-width: 0.1rem;
+}
+
+.list ul {
+  list-style-type: decimal;
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 2.4rem;
+}
+
+.list ul li {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1.6rem;
+}
+
+.list ul li span {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.list ul li button {
+  float: right;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.container .content .navigator-bottom {
+  padding-top: 1.8rem;
+}
+
+.navigator-bottom select {
+  width: 15rem;
+}
+
+.navigator-bottom button {
+  margin-left: 0.4rem;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  background: none;
+}
+
+.navigator-bottom button:hover {
+  background: linear-gradient(rgba(37, 36, 36, 0.5), rgba(37, 36, 36, 0.5));
+}
+
+.navigator-bottom button i {
+  font-size: 1.6rem;
+}
+
+footer .text-footer {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Ubuntu;
+  margin-bottom: 1.8rem;
+}
+
+@media screen and (max-width: 767.98px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 6rem;
+  }
+
+  .container .content .list {
+    width: 90vw;
+  }
+}
